@@ -1,6 +1,3 @@
-//Express
-const express = requier("express");
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
