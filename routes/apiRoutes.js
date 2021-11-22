@@ -1,12 +1,12 @@
-const router = require('express').Router();
-const path = require('path/posix');
+const fs = require('fs');
 const { routes } = require('.');
-const notesData = require('../db/db.json');
+const noteData = require('../db/db.json');
 
-router.get('/notes', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+routes.get('/api/notes', (req, res) => {
+  json.parse(fs.readFileSync(notesData));
+  res.json(noteData);
 });
 
-routes.get('/notes', function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/notes.html"))
+routes.post('/api/notes', (req, res) => {
+    
 })
